@@ -25,7 +25,7 @@ public class FirstAppByGuiApplication {
 		SpringApplication.run(FirstAppByGuiApplication.class, args);
 	}
 
-//    /**
+	//    /**
 //     * {@link ApplicationRunner#run(ApplicationArguments)} 方法在
 //     * Spring Boot 应用启动后回调
 //     *
@@ -39,4 +39,16 @@ public class FirstAppByGuiApplication {
 //                    + context.getWebServer().getClass().getName());
 //        };
 //    }
+
+	/**
+	 * ServletWebServerInitializedEvent 和 ReactiveWebServerInitializedEvent
+	 * 是 WebServerInitializedEvent的实现类。
+	 * 监控父类可以覆盖更广的场景，可以监控非Web，比上面的方法更健壮。
+	 * @param event
+	 */
+	@EventListener(WebServerInitializedEvent.class)
+	public void onWebServerReady(WebServerInitializedEvent event) {
+		System.out.println("当前 WebServer 实现类为："
+                    + event.getWebServer().getClass().getName());
+	}
 }

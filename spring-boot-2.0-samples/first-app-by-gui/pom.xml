@@ -6,7 +6,8 @@
 	<groupId>thinking-in-spring-boot</groupId>
 	<artifactId>first-app-by-gui</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+<!--	<packaging>jar</packaging>-->
+	<packaging>war</packaging>
 
 	<name>《Spring Boot 编程思想》图形化构建 Spring Boot 应用</name>
 
@@ -114,6 +115,7 @@
 			</plugin>
 
 			<plugin>
+				<!-- 与springboot版本一致 -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.0.2.RELEASE</version>
