@@ -50,6 +50,12 @@
 		<!--</exclusions>-->
 		<!--</dependency>-->
 
+		<!-- Tomcat -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+
 		<!--&lt;!&ndash; Use Jetty instead &ndash;&gt;-->
 		<!--<dependency>-->
 		<!--<groupId>org.springframework.boot</groupId>-->
@@ -68,11 +74,6 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-		<!-- Tomcat -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>
 
 		<!-- WebFlux 依赖 -->
 		<dependency>
